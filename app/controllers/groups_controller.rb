@@ -21,11 +21,11 @@ class GroupsController < ApplicationController
     @group.user = current_user
 
     if @group.save
-    redirect_to groups_path
+      redirect_to groups_path
   else
     render :new
   end
-  end
+end
 
   def update
     @group = Group.find(params[:id])
